@@ -119,7 +119,7 @@
     <div id="outer">
         <div id="login">
             <?php
-            $connect = mysqli_connect('54.180.145.206:3306', 'baeseokjae', 'qotjrwo95!', 'seokjae') or die ("connect fail");
+            $connect = mysqli_connect('13.209.88.207:3306', 'root', '1234', 'seokjae') or die ("connect fail");
 
             session_start();
 
@@ -233,7 +233,7 @@
                 </style>
 
                 <?php
-                $connect = mysqli_connect('54.180.145.206:3306', 'baeseokjae', 'qotjrwo95!', 'seokjae') or die ("connect fail");
+                $connect = mysqli_connect('13.209.88.207:3306', 'root', '1234', 'seokjae') or die ("connect fail");
                 $board_num = $_GET['number'];
                 $query = "select * from daily_board where board_num = '$board_num'";
                 $result = $connect->query($query);

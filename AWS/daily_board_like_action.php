@@ -1,5 +1,5 @@
 <?php
-$connect = mysqli_connect("54.180.145.206:3306", "baeseokjae", "qotjrwo95!", "seokjae") or die("connect fail");
+$connect = mysqli_connect("13.209.88.207:3306", "root", "1234", "seokjae") or die("connect fail");
 $id = $_GET[id];
 $number = $_GET[number];
 $board_like = "select * from daily_board_like WHERE id = '$id' AND like_id = '$number'";

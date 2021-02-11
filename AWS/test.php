@@ -1,5 +1,5 @@
 <?php
-$connect = mysqli_connect('54.180.145.206:3306', 'baeseokjae', 'qotjrwo95!', 'seokjae') or die ("connect fail");
+$connect = mysqli_connect('13.209.88.207:3306', 'root', '1234', 'seokjae') or die ("connect fail");
 $youtube_api_key = "AIzaSyDU2CDhOZZcdgO1bj6BVIlrZavN_8AZuso";
 $url = "https://www.youtube.com/watch?v=ieo68NzgXkk"; //https://www.youtube.com/watch?v=IPXIgEAGe4U
 

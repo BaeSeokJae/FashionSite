@@ -1,5 +1,5 @@
 <?php
-$connect = mysqli_connect("54.180.145.206:3306", "baeseokjae", "qotjrwo95!", "seokjae") or die ("connect fail");
+$connect = mysqli_connect("13.209.88.207:3306", "root", "1234", "seokjae") or die ("connect fail");
 $rno = $_POST['rno']; //댓글번호
 $bno = $_POST['b_no']; //게시글 번호
 $sql = "select * from board_reply where number='" . $rno . "'"; //reply테이블에서 idx가 rno변수에 저장된 값을 찾음

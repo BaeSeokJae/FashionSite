@@ -1,5 +1,5 @@
 <?php
-$connect = mysqli_connect('54.180.145.206:3306', 'baeseokjae', 'qotjrwo95!', 'seokjae') or die ("connect fail");
+$connect = mysqli_connect('13.209.88.207:3306', 'root', '1234', 'seokjae') or die ("connect fail");
 //simple_html_dom php 파일을 include함
 include('./library/simple_html_dom.php');
 //$url = "https://www.musinsa.com/index.php?m=news&p=1"; //자신이 원하는 페이지
@@ -234,7 +234,7 @@ $paging .= '</ul>';
     <div id="outer">
         <div id="login">
             <?php
-            $connect = mysqli_connect('54.180.145.206:3306', 'baeseokjae', 'qotjrwo95!', 'seokjae') or die ("connect fail");
+            $connect = mysqli_connect('13.209.88.207:3306', 'root', '1234', 'seokjae') or die ("connect fail");
 
             session_start();
 

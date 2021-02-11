@@ -42,11 +42,11 @@ if ($uploadOk == 0) {
         - 파일형식
         */
         $filename = $_FILES["fileToUpload"]["name"];
-        $imgurl = "http://54.180.145.206/uploads/". $_FILES["fileToUpload"]["name"];
+        $imgurl = "http://13.209.88.207/uploads/". $_FILES["fileToUpload"]["name"];
         $size = $_FILES["fileToUpload"]["size"];
 
 //        include_once 'test.php';
-        $conn = mysqli_connect("54.180.145.206:3306", "baeseokjae", "qotjrwo95!", "seokjae");
+        $conn = mysqli_connect("13.209.88.207:3306", "root", "1234", "seokjae");
         //images 테이블에 이미지정보를 저장하자.
         $sql = "insert into images(filename, imgurl, size) values('$filename','$imgurl','$size')";
         mysqli_query($conn,$sql);

@@ -1,5 +1,5 @@
 <?php
-$connect = mysqli_connect('54.180.145.206:3306', 'baeseokjae', 'qotjrwo95!', 'seokjae') or die ("connect fail");
+$connect = mysqli_connect('13.209.88.207:3306', 'root', '1234', 'seokjae') or die ("connect fail");
 $category = $_GET['category'];
 $search_con = $_GET['search'];
 $replacement = '<strong class="' . $search_con . '" style="color: #3CA9CD">' . $search_con . '</strong>';
@@ -114,7 +114,7 @@ while ($row = $result->fetch_array()) {
     <div id="outer">
         <div id="login">
             <?php
-            $connect = mysqli_connect('54.180.145.206:3306', 'baeseokjae', 'qotjrwo95!', 'seokjae') or die ("connect fail");
+            $connect = mysqli_connect('13.209.88.207:3306', 'root', '1234', 'seokjae') or die ("connect fail");
             $board_number = 'select * from daily_board order by number desc limit 1';
             $result2 = $connect->query($board_number);
             $board_number1 = $result2->fetch_assoc();

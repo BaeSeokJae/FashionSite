@@ -25,7 +25,7 @@
     <div id="outer">
         <div id="login">
             <?php
-            $connect = mysqli_connect('54.180.145.206:3306', 'baeseokjae', 'qotjrwo95!', 'seokjae') or die ("connect fail");
+            $connect = mysqli_connect('13.209.88.207:3306', 'root', '1234', 'seokjae') or die ("connect fail");
             $query = "select * from notice order by number desc";
             $result = $connect->query($query);
             $total = mysqli_num_rows($result);

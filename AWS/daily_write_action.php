@@ -1,7 +1,7 @@
 <?php
 header("Content-Type: text/html; charset=UTF-8");
 session_start();
-$connect = mysqli_connect('54.180.145.206:3306', 'baeseokjae', 'qotjrwo95!', 'seokjae') or die ("connect fail");
+$connect = mysqli_connect('13.209.88.207:3306', 'root', '1234', 'seokjae') or die ("connect fail");
 mysqli_query($connect, 'SET NAMES utf8');
 $board_num = $_POST['number'];
 $board_number = $board_num + 1;

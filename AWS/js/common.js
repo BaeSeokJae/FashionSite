@@ -98,7 +98,7 @@ $(document).ready(function () {
 //     }
 //
 //     if (getCookie("popname") != "done"){
-//         var popUrl = "http://54.180.145.206/popup.php";
+//         var popUrl = "http://13.209.88.207/popup.php";
 //         var popOption = "width=400%, height=235%, resizable=no, scrollbars=no, status=no;";
 //         window.open(popUrl,"",popOption);
 //     }

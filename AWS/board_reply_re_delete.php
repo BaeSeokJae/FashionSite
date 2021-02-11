@@ -1,5 +1,5 @@
 <?php
-$connect = mysqli_connect("54.180.145.206:3306", "baeseokjae", "qotjrwo95!", "seokjae") or die ("connect fail");
+$connect = mysqli_connect("13.209.88.207:3306", "root", "1234", "seokjae") or die ("connect fail");
 $rno = $_POST['rno']; //댓글번호
 $r_no = $_POST['r_no'];
 $bno = $_POST['b_no']; //게시글 번호
