@@ -28,117 +28,117 @@ $query = "SELECT SQL_CALC_FOUND_ROWS * FROM news";
 $result = $connect->query($query);
 $count = mysqli_num_rows($result);
 
-//if ($count == 0) {
-//    while ($page_number < 7) {
-//        $url = "https://www.fashionn.com/board/list_new.php?page=" . $page_number . "&table=1006"; //자신이 원하는 페이지
-//        $html = file_get_html($url);
-//        foreach ($html->find('div[id=content] div.text_none div.thum_board_wrap ul.list_type_list01 li.list') as $element) {  //이미지 태그의 주소를 찾아 배열에 저장
-//            $item['title_url'] = $element->children(1)->children(0)->children(0)->href;
-//            if ($item['title_url'] == null) {
-//                $item['title_url'] = $element->children(0)->children(0)->children(0)->href;
-//            }
-//            $item['title'] = $element->children(1)->children(0)->children(0)->plaintext;
-//            if ($item['title'] == null) {
-//                $item['title'] = $element->children(0)->children(0)->children(0)->plaintext;
-//            }
-//            $item['context'] = $element->children(1)->children(1)->children(0)->plaintext;
-//            if($item['context'] == null) {
-//                $item['context'] = $element->children(0)->children(1)->children(0)->plaintext;
-//            }
-//            $item['url'] = $element->children(1)->children(0)->children(0)->href;
-//            $item['img'] = $element->children(0)->children(0)->children(0)->src;
-//            if ($item['img'] == null) {
-//                $item['img'] = $element->children(0)->children(1)->children(0)->src;
-//            }
-//            $title_url = $item['title_url'];
-//            $title = $item['title'];
-//            $context = $item['context'];
-//            $url = $item['url'];
-//            $img = $item['img'];
-//
-//            $title_url = addslashes($title_url);
-//            $title = addslashes($title);
-//            $context = addslashes($context);
-//            $url = addslashes($url);
-//            $img = addslashes($img);
-//
-//            $sql = "insert into news(id, title_url, title, context, url, img)
-//                        values(null,'$title_url','$title','$context','$url','$img')";
-//            $result = $connect->query($sql);
-//            reset($item);
-//        }
-//        $page_number++;
-//    }
-//} else if ($count > 0) {
-//    while ($page_number < 7) {
-//        $url = "https://www.fashionn.com/board/list_new.php?page=" . $page_number . "&table=1006"; //자신이 원하는 페이지
-//        $html = file_get_html($url);
-//        foreach ($html->find('div[id=content] div.text_none div.thum_board_wrap ul.list_type_list01 li.list') as $element) {  //이미지 태그의 주소를 찾아 배열에 저장
-//            $item['title_url'] = $element->children(1)->children(0)->children(0)->href;
-//            if ($item['title_url'] == null) {
-//                $item['title_url'] = $element->children(0)->children(0)->children(0)->href;
-//            }
-//            $item['title'] = $element->children(1)->children(0)->children(0)->plaintext;
-//            if ($item['title'] == null) {
-//                $item['title'] = $element->children(0)->children(0)->children(0)->plaintext;
-//            }
-//            $item['context'] = $element->children(1)->children(1)->children(0)->plaintext;
-//            if($item['context'] == null) {
-//                $item['context'] = $element->children(0)->children(1)->children(0)->plaintext;
-//            }
-//            $item['url'] = $element->children(1)->children(0)->children(0)->href;
-//            $item['img'] = $element->children(0)->children(0)->children(0)->src;
-//            if ($item['img'] == null) {
-//                $item['img'] = $element->children(0)->children(1)->children(0)->src;
-//            }
-//            $title_url = $item['title_url'];
-//            $title = $item['title'];
-//            $context = $item['context'];
-//            $url = $item['url'];
-//            $img = $item['img'];
-//
-//            $title_url = addslashes($title_url);
-//            $title = addslashes($title);
-//            $context = addslashes($context);
-//            $url = addslashes($url);
-//            $img = addslashes($img);
-//
-//            $query = "update news set title_url='$title_url', title='$title', context='$context', url='$url', img='$img' where id='$number'";
-//            $result = $connect->query($query);
-//            reset($item);
-//            $number++;
-//        }
-//        $page_number++;
-//    }
-//}
+if ($count == 0) {
+    while ($page_number < 7) {
+        $url = "https://www.fashionn.com/board/list_new.php?page=" . $page_number . "&table=1006"; //자신이 원하는 페이지
+        $html = file_get_html($url);
+        foreach ($html->find('div[id=content] div.text_none div.thum_board_wrap ul.list_type_list01 li.list') as $element) {  //이미지 태그의 주소를 찾아 배열에 저장
+            $item['title_url'] = $element->children(1)->children(0)->children(0)->href;
+            if ($item['title_url'] == null) {
+                $item['title_url'] = $element->children(0)->children(0)->children(0)->href;
+            }
+            $item['title'] = $element->children(1)->children(0)->children(0)->plaintext;
+            if ($item['title'] == null) {
+                $item['title'] = $element->children(0)->children(0)->children(0)->plaintext;
+            }
+            $item['context'] = $element->children(1)->children(1)->children(0)->plaintext;
+            if($item['context'] == null) {
+                $item['context'] = $element->children(0)->children(1)->children(0)->plaintext;
+            }
+            $item['url'] = $element->children(1)->children(0)->children(0)->href;
+            $item['img'] = $element->children(0)->children(0)->children(0)->src;
+            if ($item['img'] == null) {
+                $item['img'] = $element->children(0)->children(1)->children(0)->src;
+            }
+            $title_url = $item['title_url'];
+            $title = $item['title'];
+            $context = $item['context'];
+            $url = $item['url'];
+            $img = $item['img'];
 
-//if ($count == 0) {
-//    foreach ($html->find('body.NEWS_BODY div.column-wrapper div.bottom-column.column.clearfix div.main-content-wrapper div.main-content div.content-wrapper.news div.section ul.news-article-list.article-list.list li.listItem') as $element) {  //이미지 태그의 주소를 찾아 배열에 저장
-//        $item['title_url'] = $element->children(1)->children(0)->children(0)->href;
-//        $item['title'] = $element->children(1)->children(0)->children(0)->plaintext;
-//        $item['context'] = $element->children(1)->children(2)->plaintext;
-//        $item['url'] = $element->children(0)->children(0)->href;
-//        $item['img'] = $element->children(0)->children(0)->children(0)->src;
-//
-//        $sql = "insert into news(id, title_url, title, context, url, img)
-//                        values(null,'$item[title_url]','$item[title]','$item[context]','$item[url]','$item[img]')";
-//        $result = $connect->query($sql);
-//        reset($item);
-//    }
-//} else if ($count > 0) {
-//    foreach ($html->find('body.NEWS_BODY div.column-wrapper div.bottom-column.column.clearfix div.main-content-wrapper div.main-content div.content-wrapper.news div.section ul.news-article-list.article-list.list li.listItem') as $element) {  //이미지 태그의 주소를 찾아 배열에 저장
-//        $item['title_url'] = $element->children(1)->children(0)->children(0)->href;
-//        $item['title'] = $element->children(1)->children(0)->children(0)->plaintext;
-//        $item['context'] = $element->children(1)->children(2)->plaintext;
-//        $item['url'] = $element->children(0)->children(0)->href;
-//        $item['img'] = $element->children(0)->children(0)->children(0)->src;
-//
-//        $query = "update news set title_url='$item[title_url]', title='$item[title]', context='$item[context]', url='$item[url]', img='$item[img]' where id='$number'";
-//        $result = $connect->query($query);
-//        reset($item);
-//        $number++;
-//    }
-//}
+            $title_url = addslashes($title_url);
+            $title = addslashes($title);
+            $context = addslashes($context);
+            $url = addslashes($url);
+            $img = addslashes($img);
+
+            $sql = "insert into news(id, title_url, title, context, url, img)
+                        values(null,'$title_url','$title','$context','$url','$img')";
+            $result = $connect->query($sql);
+            reset($item);
+        }
+        $page_number++;
+    }
+} else if ($count > 0) {
+    while ($page_number < 7) {
+        $url = "https://www.fashionn.com/board/list_new.php?page=" . $page_number . "&table=1006"; //자신이 원하는 페이지
+        $html = file_get_html($url);
+        foreach ($html->find('div[id=content] div.text_none div.thum_board_wrap ul.list_type_list01 li.list') as $element) {  //이미지 태그의 주소를 찾아 배열에 저장
+            $item['title_url'] = $element->children(1)->children(0)->children(0)->href;
+            if ($item['title_url'] == null) {
+                $item['title_url'] = $element->children(0)->children(0)->children(0)->href;
+            }
+            $item['title'] = $element->children(1)->children(0)->children(0)->plaintext;
+            if ($item['title'] == null) {
+                $item['title'] = $element->children(0)->children(0)->children(0)->plaintext;
+            }
+            $item['context'] = $element->children(1)->children(1)->children(0)->plaintext;
+            if($item['context'] == null) {
+                $item['context'] = $element->children(0)->children(1)->children(0)->plaintext;
+            }
+            $item['url'] = $element->children(1)->children(0)->children(0)->href;
+            $item['img'] = $element->children(0)->children(0)->children(0)->src;
+            if ($item['img'] == null) {
+                $item['img'] = $element->children(0)->children(1)->children(0)->src;
+            }
+            $title_url = $item['title_url'];
+            $title = $item['title'];
+            $context = $item['context'];
+            $url = $item['url'];
+            $img = $item['img'];
+
+            $title_url = addslashes($title_url);
+            $title = addslashes($title);
+            $context = addslashes($context);
+            $url = addslashes($url);
+            $img = addslashes($img);
+
+            $query = "update news set title_url='$title_url', title='$title', context='$context', url='$url', img='$img' where id='$number'";
+            $result = $connect->query($query);
+            reset($item);
+            $number++;
+        }
+        $page_number++;
+    }
+}
+
+if ($count == 0) {
+    foreach ($html->find('body.NEWS_BODY div.column-wrapper div.bottom-column.column.clearfix div.main-content-wrapper div.main-content div.content-wrapper.news div.section ul.news-article-list.article-list.list li.listItem') as $element) {  //이미지 태그의 주소를 찾아 배열에 저장
+        $item['title_url'] = $element->children(1)->children(0)->children(0)->href;
+        $item['title'] = $element->children(1)->children(0)->children(0)->plaintext;
+        $item['context'] = $element->children(1)->children(2)->plaintext;
+        $item['url'] = $element->children(0)->children(0)->href;
+        $item['img'] = $element->children(0)->children(0)->children(0)->src;
+
+        $sql = "insert into news(id, title_url, title, context, url, img)
+                        values(null,'$item[title_url]','$item[title]','$item[context]','$item[url]','$item[img]')";
+        $result = $connect->query($sql);
+        reset($item);
+    }
+} else if ($count > 0) {
+    foreach ($html->find('body.NEWS_BODY div.column-wrapper div.bottom-column.column.clearfix div.main-content-wrapper div.main-content div.content-wrapper.news div.section ul.news-article-list.article-list.list li.listItem') as $element) {  //이미지 태그의 주소를 찾아 배열에 저장
+        $item['title_url'] = $element->children(1)->children(0)->children(0)->href;
+        $item['title'] = $element->children(1)->children(0)->children(0)->plaintext;
+        $item['context'] = $element->children(1)->children(2)->plaintext;
+        $item['url'] = $element->children(0)->children(0)->href;
+        $item['img'] = $element->children(0)->children(0)->children(0)->src;
+
+        $query = "update news set title_url='$item[title_url]', title='$item[title]', context='$item[context]', url='$item[url]', img='$item[img]' where id='$number'";
+        $result = $connect->query($query);
+        reset($item);
+        $number++;
+    }
+}
 
 $query = "SELECT SQL_CALC_FOUND_ROWS * FROM news";
 //$query .= " ORDER BY id DESC ";
