@@ -1,5 +1,6 @@
 <?php
-$connect = mysqli_connect('13.209.88.207:3306', 'root', '1234', 'seokjae') or die ("connect fail");
+//$connect = mysqli_connect('13.209.88.207:3306', 'root', '1234', 'seokjae') or die ("connect fail");
+$connect = include("../dbcon.php");
 $connect->set_charset("UTF-8");
 
 /* 페이징 시작 */
