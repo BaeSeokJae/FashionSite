@@ -1,5 +1,5 @@
 <?php
-$connect = mysqli_connect('13.209.88.207:3306', 'root', 'qotjrwo95!', 'seokjae') or die ("connect fail");
+$connect = mysqli_connect('13.209.88.207:3306', 'root', '1234', 'seokjae') or die ("connect fail");
 /* 페이징 시작 */
 //페이지 get 변수가 있다면 받아오고, 없다면 1페이지를 보여준다.
 if (isset($_GET['page'])) {
@@ -112,7 +112,7 @@ while ($row = $result->fetch_array()) {
     <div id="outer">
         <div id="login">
             <?php
-            $connect = mysqli_connect('13.209.88.207:3306', 'root', 'qotjrwo95!', 'seokjae') or die ("connect fail");
+            $connect = mysqli_connect('13.209.88.207:3306', 'root', '1234', 'seokjae') or die ("connect fail");
             $board_number='select * from daily_board order by number desc limit 1';
             $result2 = $connect->query($board_number);
             $board_number1 = $result2->fetch_assoc();
