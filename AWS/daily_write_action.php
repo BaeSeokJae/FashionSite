@@ -13,7 +13,6 @@ $date = date('Y-m-d H:i:s');            //Date
 $URL = './daily_board.php';//return URL
 $target_dir = "./uploads/";
 $total = count($_FILES["file"]["name"]);
-
 // Check file size
 
 for ($i = 0; $i < $total; $i++) {
@@ -21,7 +20,6 @@ for ($i = 0; $i < $total; $i++) {
     $ext = pathinfo($target_file, PATHINFO_EXTENSION);
     $filename = basename($target_file, ".$ext");
     $num = 1;
-
     if (file_exists($target_file)) {
         while (file_exists($target_file)) {
             $filename2 = $filename . "($num)";
